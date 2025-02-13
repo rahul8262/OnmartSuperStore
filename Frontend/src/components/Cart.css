@@ -1,0 +1,76 @@
+.cart-component {
+  max-width: 600px; /* Set a max-width for the cart container */
+  margin: 0 auto; /* Center the cart container */
+  padding: 20px;
+  font-size: 18px;
+  color: #333; /* Text color for better readability */
+  background-color: #5bb77e; /* Light grey background for contrast */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow around the component */
+}
+
+.cart-component h2 {
+  text-align: center; /* Centers the heading */
+  font-size: 24px; /* Slightly reduced for medium screens */
+  font-weight: 600; /* Making the font a bit bolder */
+}
+
+.cart-component th,
+.cart-component td {
+  padding: 10px 20px;
+  border-bottom: 1px solid #c2ea65; /* Adding a subtle line to separate items */
+  text-align: center; /* Center-align the text in the table cells */
+}
+
+.cart-component td button {
+  background: #CC8B18; /* Keeping the button color */
+  color: white;
+  border: none;
+  padding: 6px 12px; /* Adjusting padding for the button */
+  font-weight: 600; /* Bold font for button text */
+  border-radius: 50%; /* Make the button round */
+}
+
+.cart-component label,
+.cart-component input,
+.cart-component form button {
+  display: block; /* Makes these elements block-level for stacking */
+  width: 100%; /* Full width for inputs and button */
+  margin: 10px auto; /* Margin for top and bottom, auto for left and right */
+  box-sizing: border-box; /* Border-box for accurate width calculation */
+}
+
+.cart-component form button {
+  background-color: #5A88CA; /* Primary action color */
+  padding: 10px 15px; /* Bigger button padding */
+  font-weight: 600; /* Bold font for button text */
+  border-radius: 20px; /* Rounded corners for the button */
+}
+
+.cart-component form button:disabled {
+  background-color: #ed3b0e; /* Disabled button color */
+}
+
+.cart-component form button:hover:enabled {
+  background-color: #4878A8; /* Button color on hover */
+}
+
+.cart-component .warning {
+  color: #D32F2F; /* Warning color */
+}
+
+@media (min-width: 768px) {
+  .cart-component {
+    padding: 20px 50px; /* Increased padding on larger screens */
+    margin-top: 100px;
+  }
+
+  .cart-component th,
+  .cart-component td {
+    text-align: center; /* Ensures center alignment on larger screens */
+  }
+
+  .cart-component input,
+  .cart-component form button {
+    max-width: 300px; /* Restricts the width of inputs and button on larger screens */
+  }
+}

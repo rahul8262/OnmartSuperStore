@@ -1,0 +1,47 @@
+.home-component {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a three-column layout */
+    grid-gap: 20px; /* Smaller gap for a tighter layout */
+    padding: 16px; /* Reduced padding */
+    background-color: #e7e7e7; /* Light grey background for the whole component */
+}
+
+.home-component .thumbnail-component {
+    transition: transform 0.2s ease-in-out; /* Adds a transition effect to thumbnails */
+}
+
+.home-component .thumbnail-component:hover {
+    transform: translateY(-10px); /* Lifts the thumbnail on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+}
+
+/* Apply a background color change to every thumbnail */
+.home-component .thumbnail-component div {
+    border-radius: 8px; /* Rounded corners for the thumbnails */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent shadow for depth */
+}
+
+/* Change the background color for every 3rd thumbnail */
+.home-component .thumbnail-component:nth-child(3n + 1) div {
+    background-color: #ffd700; /* Gold color */
+}
+
+.home-component .thumbnail-component:nth-child(3n + 2) div {
+    background-color: #87ceeb; /* Sky blue color */
+}
+
+.home-component .thumbnail-component:nth-child(3n + 3) div {
+    background-color: #ffa07a; /* Light coral color */
+}
+
+@media (min-width: 768px) {
+    .home-component {
+        grid-template-columns: repeat(4, 1fr); /* Four columns on wider screens */
+        padding: 32px 50px; /* Larger padding */
+        grid-gap: 24px 24px; /* Consistent gap between items */
+    }
+
+    .home-component .thumbnail-component {
+        margin-bottom: 0; /* Removes margin at the bottom */
+    }
+}

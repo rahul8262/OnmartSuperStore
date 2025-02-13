@@ -1,0 +1,74 @@
+.orders-component {
+  padding: 0; /* Remove padding to allow the table to use full width */
+  display: inherit; /* Flex container for vertical centering */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  min-height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Ensures padding does not affect the overall width */
+}
+
+.orders-component h2 {
+  margin-top: 1em; /* Add some space above the title */
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center; /* Center align the heading */
+}
+
+/* Encasing box for orders */
+.orders-component .orders-box {
+  border: 1px solid #911010; /* Add border for the box */
+  border-radius: 8px; /* Slightly rounded corners for the box */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the box */
+  margin: 20px; /* Space around the box */
+  width: auto; /* Width based on content */
+  max-width: 80%; /* Maximum width of the box */
+  background-color: #fff; /* White background for the box */
+}
+
+.orders-component table {
+  font-size: 18px;
+  font-weight: 400;
+  border-collapse: collapse; /* Ensures table borders collapse into a single border */
+  margin: 0; /* Remove margin for table inside the box */
+  width: 100%; /* Table width to be as wide as the orders-box */
+}
+
+.orders-component th,
+.orders-component td {
+  text-align: center; /* Center the text within table headers and cells */
+  padding: 10px;
+  min-width: 130px; /* Ensure minimum width for each cell */
+}
+
+.orders-component .order {
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.orders-component button {
+  border-radius: 26px;
+  background-color: rgb(237, 44, 1);
+  color: white;
+  border: none;
+  width: 150px;
+  height: 43px;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Ensure the button behaves as a block element */
+}
+
+
+
+.orders-component button:hover {
+  opacity: 75%;
+}
+
+@media (min-width: 768px) {
+  .orders-component .orders-box {
+    max-width: 60%; /* Adjust maximum width for larger screens */
+  }
+}

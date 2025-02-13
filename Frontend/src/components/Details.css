@@ -1,0 +1,79 @@
+.details-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Use space-around for even spacing */
+    padding: 20px; /* Consistent padding */
+    background-color: #e7e7e7; /* Light grey background like home-component */
+}
+
+.details-component > div:first-child {
+    padding: 0 20px;
+    background-color: #fff; /* White background for content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.details-component-sidebar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffff; /* Dark background for sidebar */
+    padding: 10px 0; /* Vertical padding */
+    overflow-x: auto; /* Horizontal scroll */
+    overflow-y: hidden; /* Hide vertical scroll */
+    z-index: 100; /* Ensure sidebar is above other content */
+}
+
+.details-component-sidebar img {
+    height: 100px;
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+.details-component-sidebar .thumbnail-component {
+    background-color: transparent; /* No background color for thumbnails */
+    transition: transform 0.2s; /* Smooth transform on hover */
+}
+
+.details-component-sidebar .thumbnail-component:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Specific background colors for each thumbnail */
+.details-component-sidebar .thumbnail-component:nth-child(3n + 1) div {
+    background-color: #ffd700; /* Gold */
+}
+
+.details-component-sidebar .thumbnail-component:nth-child(3n + 2) div {
+    background-color: #87ceeb; /* Sky blue */
+}
+
+.details-component-sidebar .thumbnail-component:nth-child(3n + 3) div {
+    background-color: #ffa07a; /* Light coral */
+}
+
+@media (min-width: 768px) {
+    .details-component {
+        flex-direction: row;
+        justify-content: space-between; /* Separate the sidebar and main content */
+        align-items: flex-start; /* Align to the top */
+    }
+
+    .details-component > div:first-child {
+        flex: 3; /* Allow content to take up more space */
+        margin-right: 20px; /* Space between content and sidebar */
+    }
+
+    .details-component-sidebar {
+        position: static; /* Normal flow of the document */
+        flex: 1; /* Sidebar takes up 1/4 of the space */
+        flex-direction: column;
+        row-gap: 20px; /* Space between thumbnails */
+        height: auto; /* Adjust height to content */
+        width: 200px; /* Fixed width for sidebar */
+    }
+}
